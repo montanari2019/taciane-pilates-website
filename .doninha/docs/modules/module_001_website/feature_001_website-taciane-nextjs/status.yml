@@ -1,0 +1,15 @@
+feature: website-taciane-nextjs
+current_stage: "PBIs documentados (doninha-analisar)"
+feature_prd_artifact: .doninha/docs/modules/module_001_website/feature_001_website-taciane-nextjs/feature.md
+stages:
+  structure: done
+pbis:
+  foundation-layout-nav: { pbi: done, desenvolver: pending }
+  theme-light-dark: { pbi: done, desenvolver: pending }
+  home-hero-curve: { pbi: done, desenvolver: pending }
+  about-taciane: { pbi: done, desenvolver: pending }
+  audience-cards: { pbi: done, desenvolver: pending }
+  studio-gallery: { pbi: done, desenvolver: pending }
+  first-class-group: { pbi: done, desenvolver: pending }
+  faq-final-cta: { pbi: done, desenvolver: pending }
+  final-polish: { pbi: done, desenvolver: pending }
