@@ -1,0 +1,111 @@
+/*
+  Tokens de cor (claro/escuro) — fonte da verdade do visual.
+  Origem: skill identidade-pilates-taciane-martins (manual "ID VISUAL", mar/2024)
+  e docs/prototipo/taciane-pilates-website-prototipo.html.
+  Regra: nenhuma cor literal fora deste arquivo. Use sempre var(--token).
+
+  Tema escuro: automático (prefers-color-scheme), forçado por data-theme="dark|light" no <html>
+  ou escolhido nos rádios #t-claro / #t-escuro do menu (CSS puro, via :has()).
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Paleta oficial da marca */
+  --creme: #fdf4eb;
+  --creme-quente: #fff2e3;
+  --branco: #ffffff;
+  --terracota: #bf735c;
+  --terracota-escuro: #9e5a45;
+  --laranja-sol: #e0925a;
+  --salvia: #798d6a;
+  --salvia-claro: #a9b299;
+  --verde-folha: #628564;
+
+  /* Cores de apoio (ambiente e fotos) */
+  --areia: #dec2a4;
+  --madeira: #a17e60;
+  --marrom-texto: #7a4e3a;
+  --grafite: #2b2523;
+  --rosa-campanha: #e58aa8;
+
+  /* Semânticos (mudam com o tema) */
+  --bg: var(--creme);
+  --bg-2: var(--creme-quente);
+  --surface: var(--branco);
+  --label: var(--grafite);
+  --label-2: rgba(43, 37, 35, 0.7);
+  --label-3: rgba(43, 37, 35, 0.38);
+  --head: var(--marrom-texto);
+  --accent: var(--terracota);
+  --accent-strong: var(--terracota-escuro);
+  --on-accent: var(--creme);
+  --block-terra: var(--terracota);
+  --block-salvia: var(--salvia);
+  --on-block: var(--creme);
+  --hairline: rgba(122, 78, 58, 0.16);
+  --fill: rgba(122, 78, 58, 0.12);
+  --fill-2: rgba(122, 78, 58, 0.07);
+
+  /* Vidro (só a cápsula de navegação e botões sobre cor) */
+  --glass-tint: rgba(253, 244, 235, 0.62);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-shadow: 0 10px 30px rgba(122, 78, 58, 0.14), 0 1px 2px rgba(122, 78, 58, 0.1);
+}
+
+/* Escuro automático (sistema), a menos que a pessoa force o claro. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not(:has(#t-claro:checked)) {
+    color-scheme: dark;
+    --bg: #1e1917;
+    --bg-2: #2a2320;
+    --surface: #332a26;
+    --label: #fdf4eb;
+    --label-2: rgba(253, 244, 235, 0.72);
+    --label-3: rgba(253, 244, 235, 0.4);
+    --head: #f1cdbd;
+    --accent: #c97c64;
+    --accent-strong: #e09a82;
+    --on-accent: #fff6ee;
+    --block-terra: #a9634e;
+    --block-salvia: #677a59;
+    --hairline: rgba(253, 244, 235, 0.12);
+    --fill: rgba(253, 244, 235, 0.12);
+    --fill-2: rgba(253, 244, 235, 0.06);
+    --glass-tint: rgba(52, 43, 39, 0.52);
+    --glass-border: rgba(255, 255, 255, 0.16);
+    --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* Escuro forçado (data-theme="dark" no <html>) ou escolhido no menu. */
+:root[data-theme="dark"]:not(:has(#t-claro:checked)),
+:root:has(#t-escuro:checked) {
+  color-scheme: dark;
+  --bg: #1e1917;
+  --bg-2: #2a2320;
+  --surface: #332a26;
+  --label: #fdf4eb;
+  --label-2: rgba(253, 244, 235, 0.72);
+  --label-3: rgba(253, 244, 235, 0.4);
+  --head: #f1cdbd;
+  --accent: #c97c64;
+  --accent-strong: #e09a82;
+  --on-accent: #fff6ee;
+  --block-terra: #a9634e;
+  --block-salvia: #677a59;
+  --hairline: rgba(253, 244, 235, 0.12);
+  --fill: rgba(253, 244, 235, 0.12);
+  --fill-2: rgba(253, 244, 235, 0.06);
+  --glass-tint: rgba(52, 43, 39, 0.52);
+  --glass-border: rgba(255, 255, 255, 0.16);
+  --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Aumentar contraste (prefers-contrast: more). */
+@media (prefers-contrast: more) {
+  :root {
+    --accent: var(--terracota-escuro);
+    --label-2: var(--label);
+  }
+}

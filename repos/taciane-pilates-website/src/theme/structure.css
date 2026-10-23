@@ -1,0 +1,39 @@
+/*
+  Tokens estruturais (iguais nos dois temas): espaço, raio, tipografia,
+  movimento e layout. Nenhum valor literal de medida fora deste arquivo
+  quando existir token equivalente.
+  Origem: docs/prototipo/taciane-pilates-website-prototipo.html (bloco TOKENS).
+*/
+
+:root {
+  /* Espaço */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Raio */
+  --radius-card: 24px;
+  --radius-big: 40px;
+  --radius-full: 999px;
+
+  /* Tipografia (as variáveis --font-* vêm do next/font em app/layout.tsx) */
+  --f-marca: var(--font-quicksand), "Montserrat", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-serif: var(--font-playfair), "Georgia", "Times New Roman", serif;
+  --f-script: var(--font-great-vibes), "Allura", "Brush Script MT", cursive;
+  --font-size-body: 17px;
+  --line-height-base: 1.6;
+
+  /* Movimento */
+  --ease-spring: cubic-bezier(0.34, 1.5, 0.64, 1);
+  --ease-push: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-theme: 300ms;
+
+  /* Layout */
+  --wrap: 1200px;
+  --gutter: 20px;
+}
