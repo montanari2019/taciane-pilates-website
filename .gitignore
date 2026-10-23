@@ -1,0 +1,18 @@
+# dependências e build
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# sistema / editor
+.DS_Store
+
+# binários grandes
+*.apk
+*.aab
+downloads/
